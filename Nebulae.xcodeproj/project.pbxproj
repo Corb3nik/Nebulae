@@ -242,6 +242,7 @@
 		3CE63E80170B8567001A65B6 /* PauseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63E7F170B8567001A65B6 /* PauseMenu.m */; };
 		3CE737CB173B40C6001B922C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE737CA173B40C6001B922C /* Default-568h@2x.png */; };
 		3CEE7894173F38C900760469 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE7893173F38C900760469 /* Default.png */; };
+		3CFABED217433C0800DB6E63 /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CFABED117433C0800DB6E63 /* Pop.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -662,6 +663,7 @@
 		3CE63E7F170B8567001A65B6 /* PauseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseMenu.m; sourceTree = "<group>"; };
 		3CE737CA173B40C6001B922C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		3CEE7893173F38C900760469 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3CFABED117433C0800DB6E63 /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -753,6 +755,7 @@
 		3C24C2E8173B3F9C001825A3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3CFABED117433C0800DB6E63 /* Pop.mp3 */,
 				3C24C2E9173B3F9C001825A3 /* Alarm.mp3 */,
 				3C24C2EA173B3F9C001825A3 /* Danger.mp3 */,
 				3C24C2EB173B3F9C001825A3 /* LaserBeam.mp3 */,
@@ -1518,6 +1521,7 @@
 				3CE737CB173B40C6001B922C /* Default-568h@2x.png in Resources */,
 				3C406CE5173C910B0037CBD7 /* GameBorders.png in Resources */,
 				3CEE7894173F38C900760469 /* Default.png in Resources */,
+				3CFABED217433C0800DB6E63 /* Pop.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1695,7 +1699,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Bouchard (A56U395SF5)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1708,6 +1712,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1721,7 +1726,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Bouchard (A56U395SF5)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -1732,6 +1737,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1741,7 +1747,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Bouchard (A56U395SF5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1754,6 +1760,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Nebulae;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"Nebulae/libs/Chipmunk/include/chipmunk\"";
 				WRAPPER_EXTENSION = app;
@@ -1764,7 +1771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Bouchard (A56U395SF5)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Nebulae/Prefix.pch;
@@ -1776,6 +1783,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = Nebulae;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"Nebulae/libs/Chipmunk/include/chipmunk\"";
 				VALIDATE_PRODUCT = YES;
