@@ -34,4 +34,6 @@
 - (void) drawSettingsButton;
 - (void) animateLine;
 - (void) animatePlayButtonSelection;
+- (void) changeSceneToGameMode;
+- (void) changeSceneToSettings;
 @end

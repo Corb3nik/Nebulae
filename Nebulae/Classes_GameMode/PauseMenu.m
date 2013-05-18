@@ -56,7 +56,7 @@
 	[backgroundSlider setTag:123];
 	[self addChild:backgroundSlider z:45];
 	
-	[backgroundSlider addTarget:[GameModeScene sharedScene] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
+	[backgroundSlider addTarget:[DifficultyManager sharedManager] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
 	
 	//... slider for the sound effects volume
 	CCControlSlider *effectBackground = [CCControlSlider sliderWithBackgroundFile:@"VolumeBackground.png" progressFile:@"Fill.png" thumbFile:@"Thumb.png"];
@@ -67,7 +67,7 @@
 	[effectBackground setTag:456];
 	[self addChild:effectBackground z:45];
 	
-	[effectBackground addTarget:[GameModeScene sharedScene] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
+	[effectBackground addTarget:[DifficultyManager sharedManager] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
 
 	CCMenu *menu = [CCMenu node];
 	CCSprite *resumeNormal = [CCSprite spriteWithFile:@"Resume.png"];

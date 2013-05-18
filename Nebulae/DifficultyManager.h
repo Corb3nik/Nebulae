@@ -31,6 +31,9 @@
 
 @property (assign) NSInteger level;
 
+@property (assign) NSInteger backgroundVolume;
+@property (assign) NSInteger soundEffectVolume;
+
 + (DifficultyManager *) sharedManager;
 
 

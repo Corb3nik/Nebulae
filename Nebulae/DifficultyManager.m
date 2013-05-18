@@ -17,7 +17,7 @@ static DifficultyManager *manager;
 @synthesize roundScore, poppedBubbleScore, droppedBubbleScore, timeBonusScore, matchScore;
 @synthesize shotsFired, shotsBaseValue;
 @synthesize level;
-
+@synthesize backgroundVolume, soundEffectVolume;
 + (DifficultyManager *)sharedManager {
 	return manager;
 }
@@ -87,6 +87,18 @@ static DifficultyManager *manager;
 	
 	return level;
 
+}
+
+- (void)volumeChanged:(CCControlSlider *)sender {
+    
+	NSInteger tag = [sender tag];
+	if (tag == 123) { // Background volume changed
+		[[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:[sender value]];
+	}
+	
+	if (tag == 456) {
+		[[SimpleAudioEngine sharedEngine] setEffectsVolume:[sender value]];
+	}
 }
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//

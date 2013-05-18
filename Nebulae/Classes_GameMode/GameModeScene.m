@@ -35,17 +35,7 @@ static GameModeScene* sGameModeScene; // Global variable that will hold the curr
 	sGameModeScene = nil;
 
 }
-- (void)volumeChanged:(CCControlSlider *)sender {
 
-	NSInteger tag = [sender tag];
-	if (tag == 123) { // Background volume changed
-		[[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:[sender value]];
-	}
-	
-	if (tag == 456) {
-		[[SimpleAudioEngine sharedEngine] setEffectsVolume:[sender value]];
-	}
-}
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//

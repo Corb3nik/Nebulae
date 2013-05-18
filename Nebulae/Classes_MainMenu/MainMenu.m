@@ -11,6 +11,7 @@
 #import "MainMenu.h"
 #import "AppDelegate.h"
 #import "GameModeScene.h"
+#import "SettingsMenu.h"
 #pragma mark - MainMenu
 
 // HelloWorldLayer implementation
@@ -31,10 +32,25 @@
 	return scene;
 }
 
--(void) changeSceneToGameMode {
+- (void) changeSceneToGameMode {
 	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:2 scene:[GameModeScene gameModeScene] withColor:ccBLACK]];
 
 
+}
+- (void) changeSceneToSettings {
+    
+    //Remove text
+	[settingsTrajectory removeFromSuperlayer];
+	[settingsLabel removeFromParentAndCleanup:YES];
+	settingsTrajectory = nil;
+	settingsLabel = nil;
+	
+	[playTrajectory removeFromSuperlayer];
+	[playLabel removeFromParentAndCleanup:YES];
+	playTrajectory = nil;
+	playLabel = nil;
+    
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[SettingsMenu scene] withColor:ccBLACK]];
 }
 - (void)drawPlayButton {
 
@@ -183,7 +199,7 @@
 		// Play button initializing
 		playButton = [CCMenuItemImage itemWithNormalImage:@"PlayButton.png" selectedImage:nil target:self selector:@selector(animatePlayButtonSelection)];
 		//Settings button initializing
-		settingsButton = [CCMenuItemImage itemWithNormalImage:@"SettingsButton.png" selectedImage:nil target:self selector:@selector(animatePlayButtonSelection)];
+		settingsButton = [CCMenuItemImage itemWithNormalImage:@"SettingsButton.png" selectedImage:nil target:self selector:@selector(changeSceneToSettings)];
 		
 		// Title
 		CCSprite *title = [CCSprite spriteWithFile:@"Title.png"];
@@ -223,7 +239,6 @@
 	
 		//play background music
 		[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ThemeSong.mp3"];
-		[[SimpleAudioEngine sharedEngine] setBackgroundMusicVolume:0.3];
 		[[SimpleAudioEngine sharedEngine] playEffect:@"Transition.mp3"];
 
 		

@@ -44,8 +44,7 @@ enum {
 @property (retain) GameOverMenu *lGameOverMenu;
 
 
-@property (assign) NSInteger backgroundVolume;
-@property (assign) NSInteger soundEffectVolume;
+
 
 
 
@@ -53,6 +52,4 @@ enum {
 + (GameModeScene*) sharedScene; //Accessor method for the GameModeScene instance.
 + (void) removeSharedScene;
 
-
-- (void)volumeChanged:(CCControlSlider *)sender;
 @end
