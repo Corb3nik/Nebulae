@@ -75,18 +75,18 @@
 	CCSprite *helpButtonSelected = [CCSprite spriteWithFile:@"HelpButton.png"];
 	[helpButtonSelected setScale:1.1];
 	
-    CCSprite *creditsButton = [CCSprite spriteWithFile:@"CreditsButton.png"];
-    CCSprite *creditsButtonSelected = [CCSprite spriteWithFile:@"CreditsButton.png"];
+    CCSprite *creditsButton = [CCSprite spriteWithFile:@"Credits.png"];
+    CCSprite *creditsButtonSelected = [CCSprite spriteWithFile:@"Credits.png"];
     [creditsButtonSelected setScale:1.1];
 	
     CCMenuItemSprite *back = [CCMenuItemSprite itemWithNormalSprite:backButton selectedSprite:backButtonSelected target:self selector:@selector(changeSceneToMainMenu)];
-	[back setPosition:CGPointMake(0, -180)];
+	[back setPosition:CGPointMake(0, -140)];
 	
 	CCMenuItemSprite *help = [CCMenuItemSprite itemWithNormalSprite:helpButton selectedSprite:helpButtonSelected target:nil selector:nil];
-	[help setPosition:CGPointMake(-80, -110)];
+	[help setPosition:CGPointMake(-80, -60)];
 	
     CCMenuItemSprite *credits = [CCMenuItemSprite itemWithNormalSprite:creditsButton selectedSprite:creditsButtonSelected target:nil selector:nil];
-	[credits setPosition:CGPointMake(80, -110)];
+	[credits setPosition:CGPointMake(80, -60)];
     
     
 	[menu addChild:back];
