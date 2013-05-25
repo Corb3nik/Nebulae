@@ -18,6 +18,7 @@ static DifficultyManager *manager;
 @synthesize shotsFired, shotsBaseValue;
 @synthesize level;
 @synthesize backgroundVolume, soundEffectVolume;
+@synthesize dangerSoundID, alarmSoundID;
 + (DifficultyManager *)sharedManager {
 	return manager;
 }
@@ -69,7 +70,7 @@ static DifficultyManager *manager;
 		[gameplayVisuals.planetBackground runAction:[CCRepeatForever actionWithAction:[CCSequence actionOne:[CCMoveBy actionWithDuration:0.1 position:CGPointMake(5, 0)] two:[CCMoveBy actionWithDuration:0.1 position:CGPointMake(-5, 0)]]]];
 	}
 	if (shotsFired == (shotsBetweenWallDrops - 1)) { // one more shot
-		alarmSoundID = [[SimpleAudioEngine sharedEngine] playEffect:@"Alarm.mp3"];
+		alarmSoundID = [[SimpleAudioEngine sharedEngine] playEffect:@"Alarm.mp3"]; // Contain the sound ID
 		[gameplayVisuals.planetBackground runAction:[CCRepeatForever actionWithAction:[CCSequence actionOne:[CCMoveBy actionWithDuration:0.1 position:CGPointMake(10, 0)] two:[CCMoveBy actionWithDuration:0.1 position:CGPointMake(-10, 0)]]]];
 		alSourcei(alarmSoundID, AL_LOOPING, 1);
 	}

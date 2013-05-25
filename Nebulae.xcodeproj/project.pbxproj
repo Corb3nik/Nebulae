@@ -680,6 +680,7 @@
 		3CE63E7F170B8567001A65B6 /* PauseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseMenu.m; sourceTree = "<group>"; };
 		3CE737CA173B40C6001B922C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		3CEE7893173F38C900760469 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3CF5651417507C84007540BB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3CFABED117433C0800DB6E63 /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -902,6 +903,7 @@
 				3C9A1AAC16D3EC370061D81A /* Foundation.framework */,
 				3C9A1AAE16D3EC370061D81A /* CoreGraphics.framework */,
 				3C9A1AB016D3EC370061D81A /* GameKit.framework */,
+				3CF5651417507C84007540BB /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

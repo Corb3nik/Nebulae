@@ -71,10 +71,7 @@ static GameModeScene* sGameModeScene; // Global variable that will hold the curr
 	[gameModeScene.lGameplayAnimationController initializeCounterparts];
 	[gameModeScene.lGameplayFlowController initializeCounterparts];
 	
-	
-	
-	
-	
+
 	return (CCScene*)gameModeScene;
 }
 - (void)onEnter {
@@ -97,7 +94,6 @@ static GameModeScene* sGameModeScene; // Global variable that will hold the curr
     }
     return self;
 }
-
 
 - (void)onExit
 {

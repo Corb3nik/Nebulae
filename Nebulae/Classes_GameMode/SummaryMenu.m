@@ -15,11 +15,14 @@
 
 @implementation SummaryMenu
 
-
 - (void)animateSummaryScreen {
 	
+    
 	elapsedTime = [gameplayFlow.end timeIntervalSinceDate:gameplayFlow.start];
-	
+    [[SimpleAudioEngine sharedEngine] stopEffect:[[DifficultyManager sharedManager] dangerSoundID]];
+    [[SimpleAudioEngine sharedEngine] stopEffect:[[DifficultyManager sharedManager] alarmSoundID]];
+
+    
 	///// --------------- TITLES ------------------ /////
 	// Show the "Cleared" title
 	CCSprite *cleared = [CCSprite spriteWithFile:@"LevelCleared.png"];

@@ -13,8 +13,7 @@
 	
 	NSInteger shotsBetweenWallDrops;
 	NSInteger shotsBaseValue;
-	ALuint dangerSoundID;
-	ALuint alarmSoundID;
+
 }
 
 
@@ -34,6 +33,8 @@
 @property (assign) NSInteger backgroundVolume;
 @property (assign) NSInteger soundEffectVolume;
 
+@property (assign, readonly) ALuint dangerSoundID;
+@property (assign, readonly) ALuint alarmSoundID;
 + (DifficultyManager *) sharedManager;
 
 
