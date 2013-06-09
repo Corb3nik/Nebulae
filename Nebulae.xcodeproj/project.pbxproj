@@ -251,6 +251,8 @@
 		3CE737CB173B40C6001B922C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE737CA173B40C6001B922C /* Default-568h@2x.png */; };
 		3CEE7894173F38C900760469 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE7893173F38C900760469 /* Default.png */; };
 		3CFABED217433C0800DB6E63 /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CFABED117433C0800DB6E63 /* Pop.mp3 */; };
+		3CFE0CC817642C6000197BE1 /* Explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CFE0CC717642C6000197BE1 /* Explosion.mp3 */; };
+		3CFE0CCA17642F8100197BE1 /* Fall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CFE0CC917642F8100197BE1 /* Fall.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -682,6 +684,8 @@
 		3CEE7893173F38C900760469 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3CF5651417507C84007540BB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3CFABED117433C0800DB6E63 /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop.mp3; sourceTree = "<group>"; };
+		3CFE0CC717642C6000197BE1 /* Explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Explosion.mp3; sourceTree = "<group>"; };
+		3CFE0CC917642F8100197BE1 /* Fall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fall.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -773,6 +777,8 @@
 		3C24C2E8173B3F9C001825A3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3CFE0CC917642F8100197BE1 /* Fall.mp3 */,
+				3CFE0CC717642C6000197BE1 /* Explosion.mp3 */,
 				3CFABED117433C0800DB6E63 /* Pop.mp3 */,
 				3C24C2E9173B3F9C001825A3 /* Alarm.mp3 */,
 				3C24C2EA173B3F9C001825A3 /* Danger.mp3 */,
@@ -1573,6 +1579,8 @@
 				3C3547FC17469CF60051B116 /* Thumb.png in Resources */,
 				3C3547FE17469D010051B116 /* Fill.png in Resources */,
 				3C348267174B0D6D00BE3179 /* Credits.png in Resources */,
+				3CFE0CC817642C6000197BE1 /* Explosion.mp3 in Resources */,
+				3CFE0CCA17642F8100197BE1 /* Fall.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

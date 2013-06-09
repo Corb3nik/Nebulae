@@ -77,7 +77,11 @@ void offsetAllBodies(cpBody *body, void *data);
 		
 		currentShape = [value pointerValue];
 		currentBubble = ( CCSprite *)currentShape->body->data; // Get the sprite for the shape
-			
+        
+        if ([[[CCDirector sharedDirector ] view] gestureRecognizers] != Nil) { // If the user is unable to touch, do not play this effect
+            [[SimpleAudioEngine sharedEngine] playEffect:@"Fall.mp3"];
+        }
+
 			currentShape->body->data = NULL; //We use nil because the data pointer is supposed to be our sprite
 			[currentBubble runAction:[CCEaseIn actionWithAction:[CCMoveTo actionWithDuration:0.7 position:CGPointMake(currentBubble.position.x, -100)]rate:2]]; // Make the bubbles grow then pop
 			cpShapeSetCollisionType(currentShape, IDLE); // Reset the shape back to the specs of a bubbleslot
@@ -96,9 +100,7 @@ void offsetAllBodies(cpBody *body, void *data);
 		}
 		
 		}
-
-	
-
+   
 
 
 }
@@ -121,6 +123,7 @@ void offsetAllBodies(cpBody *body, void *data);
 		currentShape = [value pointerValue];
 		currentBubble = ( CCSprite *)currentShape->body->data; // Get the sprite for the shape
 		currentShape->group = CP_NO_GROUP;
+        
 		if (chainedBubbles >= 3) { // If the amount of same-colored bubbles is equal or more than 3
 			
 			[currentBubble runAction:[CCSequence actions:[CCScaleTo actionWithDuration:0.1 scale:1.5],[CCHide action], nil]]; // Make the bubbles grow then pop
@@ -141,8 +144,9 @@ void offsetAllBodies(cpBody *body, void *data);
 			
 			if (currentShape->body->p.y <= 84) { // IF the bubble on the first row is popped - Do not end the game
 				gameplayFlow.isGameOver = NO;
+                
 			}
-			
+			[[SimpleAudioEngine sharedEngine] playEffect:@"Explosion.mp3"];
 		}
 		
 	}
