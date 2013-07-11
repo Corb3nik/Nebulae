@@ -29,8 +29,8 @@
 
     [super onEnter];
     
-    [credits runAction:[CCMoveTo actionWithDuration:30 position:CGPointMake(160, 0)]];
-    [quitButton runAction:[CCMoveTo actionWithDuration:30 position:CGPointMake(0, -190)]];
+    [credits runAction:[CCMoveTo actionWithDuration:20 position:CGPointMake(160, 0)]];
+    [quitButton runAction:[CCMoveTo actionWithDuration:20 position:CGPointMake(0, -190)]];
 }
 
 
