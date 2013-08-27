@@ -15,4 +15,5 @@
 + (CCScene *)scene;
 - (void) changeSceneToMainMenu;
 - (void) changeSceneToCredits;
+- (void) changeSceneToHelp;
 @end

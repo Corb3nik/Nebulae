@@ -8,7 +8,7 @@
 
 #import "Credits.h"
 #import "SettingsMenu.h"
-
+#import "SimpleAudioEngine.h"
 @implementation Credits
 +(CCScene *) scene
 {
@@ -19,18 +19,22 @@
 	// return the scene
 	return scene;
 }
+
 - (void)changeSceneToSettingsMenu {
 
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Transition.mp3"];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[SettingsMenu scene] withColor:ccWHITE]];
 
 }
-
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    [self changeSceneToSettingsMenu];
+    return NO;
+}
 - (void)onEnter { //Visuals
 
     [super onEnter];
     
-    [credits runAction:[CCMoveTo actionWithDuration:20 position:CGPointMake(160, 0)]];
-    [quitButton runAction:[CCMoveTo actionWithDuration:20 position:CGPointMake(0, -190)]];
+    [credits runAction:[CCMoveTo actionWithDuration:15 position:CGPointMake(160, 0)]];
 }
 
 
@@ -38,24 +42,20 @@
 {
     self = [super init];
     if (self) {
-        
-        CCMenu *menu = [CCMenu node];
-        CCSprite *quitSprite = [CCSprite spriteWithFile:@"Quit.png"];
-        CCSprite *selectedQuitSprite = [CCSprite spriteWithFile:@"Quit.png"];
-        [selectedQuitSprite setScale:1.1];
-        
+        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         credits = [CCSprite spriteWithFile:@"CreditNames.png"];
-        [credits setPosition:CGPointMake(160, -800)];
+        [credits setPosition:CGPointMake(160, -700)];
         [self addChild:credits];
         
-        quitButton = [CCMenuItemSprite itemWithNormalSprite:quitSprite selectedSprite:selectedQuitSprite disabledSprite:Nil target:self selector:@selector(changeSceneToSettingsMenu)];
         
-        [quitButton setPosition:CGPointMake(0, -1040)];
-        
-        
-        [menu addChild:quitButton];
-        [self addChild:menu];
     }
     return self;
+}
+
+- (void)onExit {
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+    [super onExit];
+
+
 }
 @end

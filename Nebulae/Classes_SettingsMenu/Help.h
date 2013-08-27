@@ -1,18 +1,21 @@
 //
-//  Credits.h
+//  Help.h
 //  Nebulae
 //
-//  Created by Ian Bouchard on 2013-06-09.
+//  Created by Ian Bouchard on 2013-08-24.
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Credits : CCScene <CCTargetedTouchDelegate> {
+@interface Help : CCScene  {
     
-    CCSprite *credits;
+    CCSprite *helpImage;
+    
 }
-+ (CCScene *) scene;
++ (CCScene*) scene;
 - (void) changeSceneToSettingsMenu;
+- (void) moveBackgroundImage;
+
 @end

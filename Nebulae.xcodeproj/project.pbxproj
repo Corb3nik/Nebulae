@@ -87,6 +87,7 @@
 		3C3547F817469CD00051B116 /* HelpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C3547F517469CD00051B116 /* HelpButton.png */; };
 		3C406CE5173C910B0037CBD7 /* GameBorders.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C406CE4173C910B0037CBD7 /* GameBorders.png */; };
 		3C600C711745E54900A879BE /* SettingsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C600C701745E54900A879BE /* SettingsMenu.m */; };
+		3C67A4BD17C922E600B27BCB /* Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C67A4BC17C922E600B27BCB /* Help.m */; };
 		3C9A1AA116D3EC370061D81A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9A1AA016D3EC370061D81A /* QuartzCore.framework */; };
 		3C9A1AA316D3EC370061D81A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9A1AA216D3EC370061D81A /* OpenGLES.framework */; };
 		3C9A1AA516D3EC370061D81A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9A1AA416D3EC370061D81A /* OpenAL.framework */; };
@@ -96,6 +97,8 @@
 		3C9A1AAD16D3EC370061D81A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9A1AAC16D3EC370061D81A /* Foundation.framework */; };
 		3C9A1AAF16D3EC370061D81A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9A1AAE16D3EC370061D81A /* CoreGraphics.framework */; };
 		3C9A1AB116D3EC370061D81A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9A1AB016D3EC370061D81A /* GameKit.framework */; };
+		3CA25A1D17CC4FF10045D511 /* SwipeTransition.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CA25A1C17CC4FF10045D511 /* SwipeTransition.mp3 */; };
+		3CA25A1F17CC55000045D511 /* HelpSlideShow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA25A1E17CC55000045D511 /* HelpSlideShow.png */; };
 		3CB772BD16E7E1B00000B9A1 /* GameOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB772BC16E7E1B00000B9A1 /* GameOverMenu.m */; };
 		3CBBD91F16E3D5D300270259 /* SummaryMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBBD91E16E3D5D300270259 /* SummaryMenu.m */; };
 		3CD29D4D16D477FE006A76C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD29BE716D477FD006A76C3 /* AppDelegate.m */; };
@@ -355,6 +358,8 @@
 		3C406CE4173C910B0037CBD7 /* GameBorders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBorders.png; sourceTree = "<group>"; };
 		3C600C6F1745E54900A879BE /* SettingsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenu.h; sourceTree = "<group>"; };
 		3C600C701745E54900A879BE /* SettingsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenu.m; sourceTree = "<group>"; };
+		3C67A4BB17C922E600B27BCB /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
+		3C67A4BC17C922E600B27BCB /* Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Help.m; sourceTree = "<group>"; };
 		3C9A1A9D16D3EC370061D81A /* Nebulae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nebulae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9A1AA016D3EC370061D81A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3C9A1AA216D3EC370061D81A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -365,6 +370,8 @@
 		3C9A1AAC16D3EC370061D81A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C9A1AAE16D3EC370061D81A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3C9A1AB016D3EC370061D81A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3CA25A1C17CC4FF10045D511 /* SwipeTransition.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SwipeTransition.mp3; sourceTree = "<group>"; };
+		3CA25A1E17CC55000045D511 /* HelpSlideShow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelpSlideShow.png; sourceTree = "<group>"; };
 		3CB772BB16E7E1AF0000B9A1 /* GameOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverMenu.h; sourceTree = "<group>"; };
 		3CB772BC16E7E1B00000B9A1 /* GameOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverMenu.m; sourceTree = "<group>"; };
 		3CBBD91D16E3D5D300270259 /* SummaryMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryMenu.h; sourceTree = "<group>"; };
@@ -779,6 +786,7 @@
 		3C24C2E8173B3F9C001825A3 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3CA25A1C17CC4FF10045D511 /* SwipeTransition.mp3 */,
 				3CFE0CC917642F8100197BE1 /* Fall.mp3 */,
 				3CFE0CC717642C6000197BE1 /* Explosion.mp3 */,
 				3CFABED117433C0800DB6E63 /* Pop.mp3 */,
@@ -862,6 +870,7 @@
 		3C3547F0174694A80051B116 /* Visuals_SettingsMenu */ = {
 			isa = PBXGroup;
 			children = (
+				3CA25A1E17CC55000045D511 /* HelpSlideShow.png */,
 				3CD6F9FB17810F8500C1775E /* CreditNames.png */,
 				3C348266174B0D6D00BE3179 /* Credits.png */,
 				3C3547FD17469D010051B116 /* Fill.png */,
@@ -879,6 +888,8 @@
 			children = (
 				3C600C6F1745E54900A879BE /* SettingsMenu.h */,
 				3C600C701745E54900A879BE /* SettingsMenu.m */,
+				3C67A4BB17C922E600B27BCB /* Help.h */,
+				3C67A4BC17C922E600B27BCB /* Help.m */,
 				3CFE0CCB176436C300197BE1 /* Credits.h */,
 				3CFE0CCC176436C300197BE1 /* Credits.m */,
 			);
@@ -1584,6 +1595,8 @@
 				3CFE0CC817642C6000197BE1 /* Explosion.mp3 in Resources */,
 				3CFE0CCA17642F8100197BE1 /* Fall.mp3 in Resources */,
 				3CD6F9FC17810F8500C1775E /* CreditNames.png in Resources */,
+				3CA25A1D17CC4FF10045D511 /* SwipeTransition.mp3 in Resources */,
+				3CA25A1F17CC55000045D511 /* HelpSlideShow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1749,6 +1762,7 @@
 				3C24C32F173B3F9C001825A3 /* CCScale9Sprite.m in Sources */,
 				3C600C711745E54900A879BE /* SettingsMenu.m in Sources */,
 				3CFE0CCD176436C300197BE1 /* Credits.m in Sources */,
+				3C67A4BD17C922E600B27BCB /* Help.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

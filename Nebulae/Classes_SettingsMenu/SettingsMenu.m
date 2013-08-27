@@ -11,6 +11,7 @@
 #import "SimpleAudioEngine.h"
 #import "DifficultyManager.h"
 #import "MainMenu.h"
+#import "Help.h"
 
 @implementation SettingsMenu
 +(CCScene *) scene
@@ -26,14 +27,25 @@
 
 - (void)changeSceneToMainMenu {
 
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Transition.mp3"];
+
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[MainMenu scene] withColor:ccBLACK]];
 
 }
 
 - (void)changeSceneToCredits {
 
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1 scene:[Credits scene]]];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Transition.mp3"];
 
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Credits scene] withColor:ccBLACK]];
+
+}
+
+- (void)changeSceneToHelp {
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Transition.mp3"];
+
+       [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Help scene] withColor:ccBLACK]];
 }
 - (void)onEnter {
     [super onEnter];
@@ -85,7 +97,7 @@
     CCMenuItemSprite *back = [CCMenuItemSprite itemWithNormalSprite:backButton selectedSprite:backButtonSelected target:self selector:@selector(changeSceneToMainMenu)];
 	[back setPosition:CGPointMake(0, -140)];
 	
-	CCMenuItemSprite *help = [CCMenuItemSprite itemWithNormalSprite:helpButton selectedSprite:helpButtonSelected target:nil selector:nil];
+	CCMenuItemSprite *help = [CCMenuItemSprite itemWithNormalSprite:helpButton selectedSprite:helpButtonSelected target:self selector:@selector(changeSceneToHelp)];
 	[help setPosition:CGPointMake(-80, -60)];
 	
     CCMenuItemSprite *credits = [CCMenuItemSprite itemWithNormalSprite:creditsButton selectedSprite:creditsButtonSelected target:self selector:@selector(changeSceneToCredits)];
