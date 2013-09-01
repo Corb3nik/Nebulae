@@ -78,9 +78,7 @@ void offsetAllBodies(cpBody *body, void *data);
 		currentShape = [value pointerValue];
 		currentBubble = ( CCSprite *)currentShape->body->data; // Get the sprite for the shape
         
-        if ([[[CCDirector sharedDirector ] view] gestureRecognizers] != Nil) { // If the user is unable to touch, do not play this effect
-            [[SimpleAudioEngine sharedEngine] playEffect:@"Fall.mp3"];
-        }
+        
 
 			currentShape->body->data = NULL; //We use nil because the data pointer is supposed to be our sprite
 			[currentBubble runAction:[CCEaseIn actionWithAction:[CCMoveTo actionWithDuration:0.7 position:CGPointMake(currentBubble.position.x, -100)]rate:2]]; // Make the bubbles grow then pop
@@ -101,7 +99,9 @@ void offsetAllBodies(cpBody *body, void *data);
 		
 		}
    
-
+    if ([[[CCDirector sharedDirector ] view] gestureRecognizers] != Nil && [bubbles count] > 0) { // If the user is unable to touch, do not play this effect
+        [[SimpleAudioEngine sharedEngine] playEffect:@"Fall.mp3"];
+    }
 
 }
 
