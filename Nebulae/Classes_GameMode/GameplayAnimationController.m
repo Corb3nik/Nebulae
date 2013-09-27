@@ -146,7 +146,6 @@ void offsetAllBodies(cpBody *body, void *data);
 				gameplayFlow.isGameOver = NO;
                 
 			}
-			[[SimpleAudioEngine sharedEngine] playEffect:@"Explosion.mp3"];
 		}
 		
 	}
@@ -223,7 +222,8 @@ gameplayPhysics.isBulletActive = NO; // Set the bullet inactive
 		
 		NSInteger score; // Contains the score for the group
 		CCLabelTTF *scoreLabel = [[[CCLabelTTF alloc] init] autorelease]; // This will show the score
-		
+        [[SimpleAudioEngine sharedEngine] playEffect:@"Explosion.mp3"];
+
 		if (isFallen == NO	) { // If the bubble was popped
 			score = (pow(2, amount)) * 10;
 			manager.poppedBubbleScore = manager.poppedBubbleScore + score;
