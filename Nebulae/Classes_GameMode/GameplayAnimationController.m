@@ -265,7 +265,7 @@ gameplayPhysics.isBulletActive = NO; // Set the bullet inactive
 
 - (void)startTimer { // Starts the timer of the wall (green bar on the left side)
 	[gameplayFlow setIsGameStarted:YES];
-	gameplayFlow.start = [NSDate date];
+	gameplayFlow.start = [[NSDate date]retain];
 }
 
 

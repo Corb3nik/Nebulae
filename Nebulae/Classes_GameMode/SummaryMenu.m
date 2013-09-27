@@ -14,11 +14,11 @@
 #import "DifficultyManager.h"
 
 @implementation SummaryMenu
+@synthesize elapsedTime;
 
 - (void)animateSummaryScreen {
 	
-    
-	elapsedTime = [gameplayFlow.end timeIntervalSinceDate:gameplayFlow.start];
+	elapsedTime = elapsedTime + [gameplayFlow.end timeIntervalSinceDate:gameplayFlow.start];
     [[SimpleAudioEngine sharedEngine] stopEffect:[[DifficultyManager sharedManager] dangerSoundID]];
     [[SimpleAudioEngine sharedEngine] stopEffect:[[DifficultyManager sharedManager] alarmSoundID]];
 

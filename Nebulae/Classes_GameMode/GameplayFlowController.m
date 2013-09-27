@@ -86,12 +86,21 @@
 - (void)showPauseMenu {
 	
 	PauseMenu *pauseMenu = [[PauseMenu alloc] init]; // Creates a new instance of the pause menu
-	
+    [self pauseTimer];
 	[gameplayTouch disableAllTouches];
 	[[GameModeScene sharedScene] addChild:pauseMenu];
 
 
 
+}
+- (void)pauseTimer {
+    end = [[NSDate date]retain];
+    summaryMenu.elapsedTime = summaryMenu.elapsedTime + [end timeIntervalSinceDate:start];
+     
+}
+- (void) restartTimer {
+    start = [[NSDate date]retain];
+    
 }
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//
 //-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------////-----------Extra Settings-----------//

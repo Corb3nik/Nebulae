@@ -46,4 +46,7 @@
 - (void) isLevelFinish;
 - (void) addBubblesToSummaryTable:(CCSprite *) sprite fallen:(BOOL) isFallen;
 - (void) showPauseMenu;
+
+- (void) pauseTimer;
+- (void) restartTimer;
 @end

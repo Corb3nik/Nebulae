@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SimpleAudioEngine.h"
-
 @interface DifficultyManager : NSObject {
 	
 	NSInteger shotsBetweenWallDrops;
@@ -41,5 +40,6 @@
 - (void) resetScoresWithGameOver:(BOOL)isGameOver;
 - (void) setAmountOfShotsForNextWallDropFromRemainingColors:(NSMutableArray *)remainingColors;
 - (void) isShotAmountReached;
+- (void)volumeChanged:(id)sender;
 - (NSInteger) raiseLevel;
 @end

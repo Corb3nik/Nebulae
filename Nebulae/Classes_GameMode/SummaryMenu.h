@@ -27,6 +27,8 @@
 	
 }
 
+@property float elapsedTime;
+
 // Screen emptied
 - (void) resetScene;
 - (void) animateSummaryScreen;

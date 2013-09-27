@@ -329,8 +329,8 @@ NSString *names[] = { // Array containing the name of the files used for drawing
 	borders->p = ccp(0, 0);
 	
 	// Create each border
-	leftBorder = cpSegmentShapeNew(borders, bottomLeft, topLeft, 35); // Left border with width of 30
-	rightBorder = cpSegmentShapeNew(borders, bottomRight, topRight,35); // Right border with width of 30
+	leftBorder = cpSegmentShapeNew(borders, bottomLeft, topLeft, 36); // Left border with width of 30
+	rightBorder = cpSegmentShapeNew(borders, bottomRight, topRight,36); // Right border with width of 30
 	topBorder = cpSegmentShapeNew(borders, topLeft, topRight, 32); // Top border with width of 5
 	
 	// Set the layers for each border

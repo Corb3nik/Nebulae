@@ -638,7 +638,7 @@ static CCTexture2DPixelFormat defaultAlphaPixelFormat_ = kCCTexture2DPixelFormat
 	CGSize boundingSize = CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX);
 	dim = [string sizeWithFont:font
 			 constrainedToSize:boundingSize
-				 lineBreakMode:UILineBreakModeWordWrap];
+				 lineBreakMode:NSLineBreakByWordWrapping];
 
 	return [self initWithString:string dimensions:dim hAlignment:kCCTextAlignmentCenter vAlignment:kCCVerticalTextAlignmentTop lineBreakMode:kCCLineBreakModeWordWrap font:font];
 

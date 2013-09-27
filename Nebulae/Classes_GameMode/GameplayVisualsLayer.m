@@ -17,9 +17,10 @@
 
 
 NSString *maps[] = {
-
+    @"ExplodingPlanet.png",
 	@"moon5.png",
-	@"DeadPlanet.png"
+	@"DeadPlanet.png",
+    @"FirePlanet.png",
 
 };
 
@@ -176,19 +177,25 @@ NSString *maps[] = {
 	
 	// Draw background
 	
-	NSString *chosenMap = maps[arc4random() % 2];
+	NSString *chosenMap = maps[arc4random_uniform(4)];
 	
 	if ([chosenMap isEqualToString:@"moon5.png"]) {
 		planetBackground = [CCSprite spriteWithFile:chosenMap ];
 		[planetBackground setPosition:CGPointMake(200, 170)];
 		[planetBackground setScale:0.2];
 	}
-	
 	if ([chosenMap isEqualToString:@"DeadPlanet.png"]) {
 		planetBackground = [CCSprite spriteWithFile:chosenMap];
 		[planetBackground setPosition:CGPointMake(0, -200)];
 	}
-
+    if ([chosenMap isEqualToString:@"ExplodingPlanet.png"]) {
+        planetBackground = [CCSprite spriteWithFile:chosenMap];
+        [planetBackground setPosition:CGPointMake(160, 240)];
+    }
+    if ([chosenMap isEqualToString:@"FirePlanet.png"]) {
+        planetBackground = [CCSprite spriteWithFile:chosenMap];
+        [planetBackground setPosition:CGPointMake(160, 240)];
+    }
 	[self addChild:planetBackground z:-5];
 	
 	// Draw borders
