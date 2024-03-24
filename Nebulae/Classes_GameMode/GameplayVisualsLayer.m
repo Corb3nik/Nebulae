@@ -79,7 +79,7 @@ NSString *maps[] = {
 			[inGameBubbles addObject:selectedSprite]; // add its corresponding bubble in the second array
 			
 			[selectedSprite setOpacity:0];
-			[selectedSprite setScale:0.8];
+			[selectedSprite setScale:1.6];
 			[selectedSprite setPosition:point];
 			[self addChild:selectedSprite]; // Add it in the scene
 			[selectedSprite runAction:[CCFadeIn actionWithDuration:0.7]]; // Make the following bubble fade in
@@ -182,7 +182,7 @@ NSString *maps[] = {
 	if ([chosenMap isEqualToString:@"moon5.png"]) {
 		planetBackground = [CCSprite spriteWithFile:chosenMap ];
 		[planetBackground setPosition:CGPointMake(200, 170)];
-		[planetBackground setScale:0.2];
+		[planetBackground setScale:1.6];
 	}
 	if ([chosenMap isEqualToString:@"DeadPlanet.png"]) {
 		planetBackground = [CCSprite spriteWithFile:chosenMap];
@@ -201,12 +201,14 @@ NSString *maps[] = {
 	// Draw borders
 	CCSprite *gameBorders = [CCSprite spriteWithFile:@"GameBorders.png"];
 	[gameBorders setPosition:CGPointMake(160, 240)];
+    gameBorders.scale = 2;
 	[self addChild:gameBorders z:5	];
 	
 	// Draw the laser beam
 	CCSprite *laserBeam = [CCSprite spriteWithFile:@"LaserBeam.png"];
 	[laserBeam setPosition:CGPointMake(160, 84)];
-	[laserBeam setScaleY:0.5];
+	[laserBeam setScaleY:1];
+    [laserBeam setScaleX:2];
 	[self addChild:laserBeam];
 	
 	// Draw the wall

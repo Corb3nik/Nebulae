@@ -185,7 +185,7 @@ gameplayPhysics.isBulletActive = NO; // Set the bullet inactive
 	NSInteger index = 1;
 	for (CCSprite *sprite in gameplayVisuals.inGameBubbles) {
 		time = time + 0.2;
-       CCAction *playSoundWhilePop = [CCSpawn actionOne:[CCScaleTo actionWithDuration:0.3 scale:0.8] two:[CCCallFuncO actionWithTarget:[SimpleAudioEngine sharedEngine] selector:@selector(playEffect:) object:@"Pop.mp3"]];
+       CCAction *playSoundWhilePop = [CCSpawn actionOne:[CCScaleTo actionWithDuration:0.3 scale:1.6] two:[CCCallFuncO actionWithTarget:[SimpleAudioEngine sharedEngine] selector:@selector(playEffect:) object:@"Pop.mp3"]];
         
         [sprite runAction:[CCSequence actions:[CCDelayTime actionWithDuration:time],playSoundWhilePop, nil]];
 
