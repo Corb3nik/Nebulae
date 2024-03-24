@@ -500,13 +500,13 @@
 {
 	[super startWithTarget:aTarget];
 
-	startAngle_ = [target_ rotation];
+	startAngle_ = 180;
 	if (startAngle_ > 0)
 		startAngle_ = fmodf(startAngle_, 360.0f);
 	else
 		startAngle_ = fmodf(startAngle_, -360.0f);
 
-	diffAngle_ =dstAngle_ - startAngle_;
+	diffAngle_ = dstAngle_ - startAngle_;
 	if (diffAngle_ > 180)
 		diffAngle_ -= 360;
 	if (diffAngle_ < -180)
@@ -547,13 +547,14 @@
 -(void) startWithTarget:(id)aTarget
 {
 	[super startWithTarget:aTarget];
-	startAngle_ = [target_ rotation];
+//	startAngle_ = [target_ rotation];
+    startAngle_ = 180;
 }
 
 -(void) update: (ccTime) t
 {
 	// XXX: shall I add % 360
-	[target_ setRotation: (startAngle_ +angle_ * t )];
+	[target_ setRotation: (startAngle_ + angle_ * t )];
 }
 
 -(CCActionInterval*) reverse

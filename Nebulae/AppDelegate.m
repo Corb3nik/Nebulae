@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "MainMenu.h"
+#import "Classes_GameMode/GameModeScene.h"
 #import "chipmunk.h"
 #import "DifficultyManager.h"
 @implementation AppController
@@ -79,6 +80,7 @@
 	
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	[director_ pushScene: [MainMenu scene]];
+//    [director_ pushScene: [GameModeScene gameModeScene]];
 	
 	
 	// Create a Navigation Controller with the Director

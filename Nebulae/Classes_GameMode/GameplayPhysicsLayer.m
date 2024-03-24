@@ -11,7 +11,7 @@
 #import "GameplayTouchHandler.h"
 #import "GameplayAnimationController.h"
 #import "GameplayFlowController.h"
-#import "CPDebugLayer.h"
+//#import "CPDebugLayer.h"
 
 #import "DifficultyManager.h"
 
