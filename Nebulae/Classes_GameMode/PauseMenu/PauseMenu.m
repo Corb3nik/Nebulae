@@ -43,11 +43,13 @@
 	// Draw the titles of the pause menu
 	CCSprite *pauseMenuTitle = [CCSprite spriteWithFile:@"PauseMenu.png"];
 	[pauseMenuTitle setPosition:CGPointMake(160, 240)];
+    [pauseMenuTitle setScale: 2];
 	[self addChild:pauseMenuTitle z:45];
 	
 	// Draw the background
 	CCSprite *pauseBackground = [CCSprite spriteWithFile:@"Background.png"];
 	[pauseBackground setPosition:CGPointMake(160, 240)];
+    [pauseBackground setScale: 2];
 	[self addChild:pauseBackground z:30];
 	
 	// Draw the slider for the background volume
@@ -57,6 +59,8 @@
 	[backgroundSlider setValue:[[SimpleAudioEngine sharedEngine] backgroundMusicVolume]];
 	[backgroundSlider setPosition:CGPointMake(160, 320)];
 	[backgroundSlider setTag:123];
+    [backgroundSlider setScale: 2];
+
 	[self addChild:backgroundSlider z:45];
 	
 	[backgroundSlider addTarget:[DifficultyManager sharedManager] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
@@ -68,6 +72,7 @@
 	[effectBackground setValue:[[SimpleAudioEngine sharedEngine] effectsVolume]];
 	[effectBackground setPosition:CGPointMake(160, 260)];
 	[effectBackground setTag:456];
+    [effectBackground setScale: 2];
 	[self addChild:effectBackground z:45];
 	
 	[effectBackground addTarget:[DifficultyManager sharedManager] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
@@ -75,10 +80,12 @@
 	CCMenu *menu = [CCMenu node];
 	CCSprite *resumeNormal = [CCSprite spriteWithFile:@"Resume.png"];
 	CCSprite *resumeSelected = [CCSprite spriteWithFile:@"Resume.png"];
+    [resumeNormal setScale: 2];
 	[resumeSelected setScale:1.2];
 	
 	CCSprite *quitNormal = [CCSprite spriteWithFile:@"Quit.png"];
 	CCSprite *quitSelected = [CCSprite spriteWithFile:@"Quit.png"];
+    [quitNormal setScale: 2];
 	[quitSelected setScale:1.2];
 	
 	CCMenuItemSprite *resume = [CCMenuItemSprite itemWithNormalSprite:resumeNormal selectedSprite:resumeSelected target:self selector:@selector(resumeGame)];

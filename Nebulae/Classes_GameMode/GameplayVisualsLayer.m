@@ -165,7 +165,7 @@ NSString *maps[] = {
 	gun = [CCSprite spriteWithFile:@"RailGun.png"];
 	[gun setPosition:ccp(width/2 , 0)];
 	[gun setAnchorPoint:ccp(0.49, 0.28)];
-	[gun setScale:0.5];
+	[gun setScale:1];
 	[self addChild:gun z:-1];
 
 	//Add bullet
@@ -186,14 +186,17 @@ NSString *maps[] = {
 	}
 	if ([chosenMap isEqualToString:@"DeadPlanet.png"]) {
 		planetBackground = [CCSprite spriteWithFile:chosenMap];
+        [planetBackground setScale: 2];
 		[planetBackground setPosition:CGPointMake(0, -200)];
 	}
     if ([chosenMap isEqualToString:@"ExplodingPlanet.png"]) {
         planetBackground = [CCSprite spriteWithFile:chosenMap];
+        [planetBackground setScale: 2];
         [planetBackground setPosition:CGPointMake(160, 240)];
     }
     if ([chosenMap isEqualToString:@"FirePlanet.png"]) {
         planetBackground = [CCSprite spriteWithFile:chosenMap];
+        [planetBackground setScale: 2];
         [planetBackground setPosition:CGPointMake(160, 240)];
     }
 	[self addChild:planetBackground z:-5];
@@ -214,6 +217,7 @@ NSString *maps[] = {
 	// Draw the wall
 	wall = [CCSprite spriteWithFile:@"Wall.png"];
 	[wall setPosition:CGPointMake(160, 615)];
+    [wall setScale: 2];
 	[self addChild:wall];
 	
 	// Draw the in game score label (top right)

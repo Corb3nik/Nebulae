@@ -55,7 +55,7 @@
 - (void)drawPlayButton {
 
 	UIBezierPath *path = [UIBezierPath bezierPath];
-	CGPoint position = ccpAdd(ccp(160, 240),[playButton position]);
+	CGPoint position = ccpAdd(ccp(160, 280),[playButton position]);
 	position = [[CCDirector sharedDirector] convertToGL: position];
 	CGPoint play1 = CGPointMake(position.x -20, position.y + 20);
 	CGPoint play2 = CGPointMake(position.x - 100, position.y + 20);
@@ -90,7 +90,7 @@
 
 	
 	UIBezierPath *path = [UIBezierPath bezierPath];
-	CGPoint position = ccpAdd(ccp(160, 240),[settingsButton position]);
+	CGPoint position = ccpAdd(ccp(160, 300),[settingsButton position]);
 	position = [[CCDirector sharedDirector] convertToGL:position];
 	CGPoint play1 = CGPointMake(position.x - 20, position.y - 20);
 	CGPoint play2 = CGPointMake(position.x - 160, position.y - 20);
@@ -146,7 +146,7 @@
 	[planet runAction:[CCMoveTo actionWithDuration:2 position:CGPointMake(-150, -250)]];
 	
 	// Move the earth
-	[playButton runAction:[CCSpawn actions:[CCMoveTo actionWithDuration:2 position:CGPointMake(0, 0)],[CCScaleTo actionWithDuration:2 scale:0.4],[CCRotateBy actionWithDuration:2 angle:15 ], nil]];
+	[playButton runAction:[CCSpawn actions:[CCMoveTo actionWithDuration:2 position:CGPointMake(0, 0)],[CCScaleTo actionWithDuration:2 scale:0.8],[CCRotateBy actionWithDuration:2 angle:15 ], nil]];
 	
 	// Move the galaxy
 	[settingsButton runAction:[CCMoveTo actionWithDuration:1.5 position:CGPointMake(300, -400)]];
@@ -203,7 +203,7 @@
 		
 		// Title
 		CCSprite *title = [CCSprite spriteWithFile:@"Title.png"];
-		[title setPosition:CGPointMake(160, 255)];
+		[title setPosition:CGPointMake(160, 305)];
 		[title setOpacity:0];
 		[self addChild:title z:5];
 		[title runAction:[CCFadeIn actionWithDuration:1]];
@@ -213,16 +213,16 @@
 		
 		// Planet
 		planet.position = ccp(-75, size.height/2);
-		planet.scale = 1;
-		[planet runAction:[CCRepeatForever actionWithAction:[CCRotateBy actionWithDuration:300 angle:360]]];
+		planet.scale = 2;
+		//[planet runAction:[CCRepeatForever actionWithAction:[CCRotateBy actionWithDuration:300 angle:360]]];
 		
 		// Play Button
 		playButton.position = ccp(120, 160);
-		playButton.scale = 0.05;
+		playButton.scale = 0.1;
 		
 		// Settings Button
 		settingsButton.position = ccp(140, -200);
-		settingsButton.scale = 0.8;
+		settingsButton.scale = 1.6;
 	
 		[menu addChild:playButton];
 		[menu addChild:settingsButton];

@@ -74,6 +74,7 @@
 	[effectBackground addTarget:[DifficultyManager sharedManager] action:@selector(volumeChanged:) forControlEvents:CCControlEventValueChanged];
     CCSprite *background = [CCSprite spriteWithFile:@"SettingsMenu.png"];
     [background setPosition:CGPointMake(160, 240)];
+    [background setScale: 2];
         
     
     [self addChild:background];
